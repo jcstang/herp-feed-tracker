@@ -29,11 +29,12 @@ struct MyPetsView: View {
                 .navigationBarTitle("Reptiles")
                 .navigationBarItems(
                     trailing:
-                        Button(action: {
-                            print("hi")
-                        }) {
+                        Menu {
+                            Button("open", action: {})
+                            Button("second", action: {})
+                            Button("third", action: {})
+                        } label: {
                             Image(systemName: "plus.circle")
-                                .font(.largeTitle)
                         }
                 )
             }

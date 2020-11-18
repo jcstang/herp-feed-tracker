@@ -13,6 +13,8 @@
 		A3C6979C2565913800F028D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C6979B2565913800F028D5 /* Preview Assets.xcassets */; };
 		A3C697A72565913800F028D5 /* herp_feed_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697A62565913800F028D5 /* herp_feed_trackerTests.swift */; };
 		A3C697B22565913800F028D5 /* herp_feed_trackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697B12565913800F028D5 /* herp_feed_trackerUITests.swift */; };
+		A3C697C32565971800F028D5 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697C22565971800F028D5 /* SecondView.swift */; };
+		A3C697C82565CB7900F028D5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697C72565CB7900F028D5 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		A3C697AD2565913800F028D5 /* herp-feed-trackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "herp-feed-trackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C697B12565913800F028D5 /* herp_feed_trackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = herp_feed_trackerUITests.swift; sourceTree = "<group>"; };
 		A3C697B32565913800F028D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3C697C22565971800F028D5 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		A3C697C72565CB7900F028D5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				A3C697942565913600F028D5 /* herp_feed_trackerApp.swift */,
 				A3C697962565913600F028D5 /* ContentView.swift */,
+				A3C697C72565CB7900F028D5 /* SettingsView.swift */,
+				A3C697C22565971800F028D5 /* SecondView.swift */,
 				A3C697982565913800F028D5 /* Assets.xcassets */,
 				A3C6979D2565913800F028D5 /* Info.plist */,
 				A3C6979A2565913800F028D5 /* Preview Content */,
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C697C32565971800F028D5 /* SecondView.swift in Sources */,
+				A3C697C82565CB7900F028D5 /* SettingsView.swift in Sources */,
 				A3C697972565913600F028D5 /* ContentView.swift in Sources */,
 				A3C697952565913600F028D5 /* herp_feed_trackerApp.swift in Sources */,
 			);

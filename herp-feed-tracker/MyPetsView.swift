@@ -27,12 +27,27 @@ struct MyPetsView: View {
                     }
                 }
                 .navigationBarTitle("Reptiles")
-                
+                .navigationBarItems(
+                    trailing:
+                        Button(action: {
+                            print("hi")
+                        }) {
+                            Image(systemName: "plus.circle")
+                                .font(.largeTitle)
+                        }
+                )
             }
 
         } //eof VStack
     }
 }
+
+//Menu {
+//    Button("Open in Preview", action: openInPreview)
+//    Button("Save as PDF", action: saveAsPDF)
+//} label: {
+//    Label("PDF", systemImage: "doc.fill")
+//}
 
 struct MyPetsView_Previews: PreviewProvider {
     static var previews: some View {

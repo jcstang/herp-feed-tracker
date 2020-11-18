@@ -14,6 +14,19 @@ struct Reptile: Identifiable {
     let description: String
 }
 
+struct AddButtonView: View {
+    var body: some View {
+        VStack {
+            Menu {
+                Button("Open in Preview", action: {})
+                Button("Save as PDF", action: {})
+            } label: {
+                Label("PDF", systemImage: "doc.fill")
+            }
+        }// vstack
+    }
+}
+
 struct ContentView: View {
     @State var selectedView = 0
     
@@ -26,6 +39,13 @@ struct ContentView: View {
                         Text("My Pets")
                     }
                     .tag(0)
+                
+                AddButtonView()
+                    .tabItem {
+                        Image(systemName: "goforward.plus")
+                        Text("Add")
+                    }
+                    .tag(1)
                     
                 SettingsView()
                     .tabItem {
@@ -34,7 +54,10 @@ struct ContentView: View {
                     }
                     .tag(2)
                 
+
+                
             }
+            
         }// end of TabView
     }
 }

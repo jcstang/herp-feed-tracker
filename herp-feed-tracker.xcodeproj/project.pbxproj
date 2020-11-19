@@ -17,6 +17,7 @@
 		A3C697C82565CB7900F028D5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697C72565CB7900F028D5 /* SettingsView.swift */; };
 		A3C697CD2565CD7200F028D5 /* MyPetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697CC2565CD7200F028D5 /* MyPetsView.swift */; };
 		A3C697D22565CE9400F028D5 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697D12565CE9400F028D5 /* DetailsView.swift */; };
+		A3C697D72565EB6300F028D5 /* PetCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697D62565EB6300F028D5 /* PetCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A3C697C72565CB7900F028D5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A3C697CC2565CD7200F028D5 /* MyPetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsView.swift; sourceTree = "<group>"; };
 		A3C697D12565CE9400F028D5 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		A3C697D62565EB6300F028D5 /* PetCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				A3C697962565913600F028D5 /* ContentView.swift */,
 				A3C697CC2565CD7200F028D5 /* MyPetsView.swift */,
 				A3C697D12565CE9400F028D5 /* DetailsView.swift */,
+				A3C697D62565EB6300F028D5 /* PetCircleView.swift */,
 				A3C697C72565CB7900F028D5 /* SettingsView.swift */,
 				A3C697C22565971800F028D5 /* SecondView.swift */,
 				A3C697982565913800F028D5 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 			files = (
 				A3C697C32565971800F028D5 /* SecondView.swift in Sources */,
 				A3C697C82565CB7900F028D5 /* SettingsView.swift in Sources */,
+				A3C697D72565EB6300F028D5 /* PetCircleView.swift in Sources */,
 				A3C697972565913600F028D5 /* ContentView.swift in Sources */,
 				A3C697952565913600F028D5 /* herp_feed_trackerApp.swift in Sources */,
 				A3C697CD2565CD7200F028D5 /* MyPetsView.swift in Sources */,

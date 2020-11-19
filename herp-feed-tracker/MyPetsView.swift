@@ -7,12 +7,22 @@
 
 import SwiftUI
 
+struct AddFeedingView: View {
+    var body: some View {
+        Text("add new feeding. here.")
+    }
+}
+
 struct MyPetsView: View {
-    private let repList: [Reptile] = [
+    @State var repList: [Reptile] = [
         Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball"),
         Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth"),
         Reptile(name: "Erso", icon: "default_reptile", description: "cornsnake")
     ]
+    
+    func handleNewFeeding() -> Void {
+        //display a form to fill out for new feeding
+    }
     
     var body: some View {
         VStack {
@@ -20,7 +30,10 @@ struct MyPetsView: View {
                 List(repList) { rep in
                     NavigationLink(destination: DetailsView(theReptile: rep)) {
                         HStack {
-                            Text(rep.name).font(.headline)
+                            PetCircleView(reptile: rep)
+                            Text(rep.name)
+                                .font(.headline)
+                                .padding()
                             
                             
                         }.padding(7)
@@ -30,11 +43,14 @@ struct MyPetsView: View {
                 .navigationBarItems(
                     trailing:
                         Menu {
-                            Button("open", action: {})
-                            Button("second", action: {})
-                            Button("third", action: {})
+                            Button("New Reptile", action: {
+                                self.repList.append(Reptile(name: "gizmo", icon: "default_reptile", description: "beard dragon"))
+                            })
+                            Button("New Feeding", action: handleNewFeeding)
+                            Button("New Poop", action: {})
                         } label: {
                             Image(systemName: "plus.circle")
+                                .font(.largeTitle)
                         }
                 )
             }

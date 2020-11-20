@@ -19,6 +19,8 @@ struct DetailsView: View {
                 Text(theReptile.name)
                     .font(.largeTitle)
                     .bold()
+                Text(theReptile.description)
+                    .font(.subheadline)
                 
                 Spacer()
 

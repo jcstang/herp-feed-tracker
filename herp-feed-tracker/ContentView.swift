@@ -39,26 +39,20 @@ struct ContentView: View {
                         Text("My Pets")
                     }
                     .tag(0)
-                
-                AddButtonView()
-                    .tabItem {
-                        Image(systemName: "goforward.plus")
-                        Text("Add")
-                    }
-                    .tag(1)
                     
                 SettingsView()
                     .tabItem {
                         Image(systemName: "gear")
                         Text("Settings")
                     }
-                    .tag(2)
-                
+                    .tag(1)
 
                 
             }
+            .background(Color.purple)
             
-        }// end of TabView
+        }// end of VStack
+        .background(Color.green)
     }
 }
 
@@ -66,5 +60,7 @@ struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
         ContentView()
+            
+            
     }
 }

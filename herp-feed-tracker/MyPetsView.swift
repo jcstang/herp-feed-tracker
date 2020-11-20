@@ -24,6 +24,10 @@ struct MyPetsView: View {
         //display a form to fill out for new feeding
     }
     
+    func handleNewReptile() -> Void {
+        self.repList.append(Reptile(name: "gizmo", icon: "default_reptile", description: "beard dragon"))
+    }
+    
     var body: some View {
         VStack {
             NavigationView {
@@ -43,9 +47,7 @@ struct MyPetsView: View {
                 .navigationBarItems(
                     trailing:
                         Menu {
-                            Button("New Reptile", action: {
-                                self.repList.append(Reptile(name: "gizmo", icon: "default_reptile", description: "beard dragon"))
-                            })
+                            Button("New Reptile", action: handleNewReptile)
                             Button("New Feeding", action: handleNewFeeding)
                             Button("New Poop", action: {})
                         } label: {
@@ -56,6 +58,7 @@ struct MyPetsView: View {
             }
 
         } //eof VStack
+        .background(Color.green)
     }
 }
 

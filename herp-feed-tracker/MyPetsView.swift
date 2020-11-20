@@ -13,11 +13,18 @@ struct AddFeedingView: View {
     }
 }
 
+struct Reptile: Identifiable {
+    let id = UUID()
+    let name: String
+    let icon: String
+    let description: String
+}
+
 struct MyPetsView: View {
-    @State var repList: [Reptile] = [
-        Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball"),
-        Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth"),
-        Reptile(name: "Erso", icon: "default_reptile", description: "cornsnake")
+  @State var repList: [Reptile] = [
+      Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball"),
+      Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth"),
+      Reptile(name: "Erso", icon: "default_reptile", description: "cornsnake")
     ]
     
     func handleNewFeeding() -> Void {
@@ -25,41 +32,39 @@ struct MyPetsView: View {
     }
     
     func handleNewReptile() -> Void {
-        self.repList.append(Reptile(name: "gizmo", icon: "default_reptile", description: "beard dragon"))
+      self.repList.append(Reptile(name: "gizmo", icon: "default_reptile", description: "beard dragon"))
     }
     
     var body: some View {
-        VStack {
-            NavigationView {
-                List(repList) { rep in
-                    NavigationLink(destination: DetailsView(theReptile: rep)) {
-                        HStack {
-                            PetCircleView(reptile: rep)
-                            Text(rep.name)
-                                .font(.headline)
-                                .padding()
-                            
-                            
-                        }.padding(7)
-                    }
-                }
-                .navigationBarTitle("Reptiles")
-                .navigationBarItems(
-                    trailing:
-                        Menu {
-                            Button("New Reptile", action: handleNewReptile)
-                            Button("New Feeding", action: handleNewFeeding)
-                            Button("New Poop", action: {})
-                        } label: {
-                            Image(systemName: "plus.circle")
-                                .font(.largeTitle)
-                        }
-                )
-            }
+      VStack {
+        NavigationView {
+          List(repList) { rep in
+            NavigationLink(destination: DetailsView(theReptile: rep)) {
+              HStack {
+                  PetCircleView(reptile: rep)
+                  Text(rep.name)
+                      .font(.headline)
+                      .padding()
 
-        } //eof VStack
-        .background(Color.green)
-    }
+              }.padding(7)
+            }
+          }
+          .navigationBarTitle("Reptiles")
+          .navigationBarItems(
+            trailing:
+              Menu {
+                Button("New Reptile", action: handleNewReptile)
+                Button("New Feeding", action: handleNewFeeding)
+                Button("New Poop", action: {})
+              } label: {
+                Image(systemName: "plus.circle")
+                  .font(.largeTitle)
+              }
+          )
+          
+        }// eof nav view
+      } //eof VStack
+    }// eof body
 }
 
 //Menu {

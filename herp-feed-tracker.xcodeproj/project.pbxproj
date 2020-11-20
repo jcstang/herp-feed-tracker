@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		A3C697912565913600F028D5 /* herp-feed-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "herp-feed-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C697942565913600F028D5 /* herp_feed_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = herp_feed_trackerApp.swift; sourceTree = "<group>"; };
-		A3C697962565913600F028D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A3C697962565913600F028D5 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		A3C697982565913800F028D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3C6979B2565913800F028D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3C6979D2565913800F028D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		A3C697B32565913800F028D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3C697C22565971800F028D5 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		A3C697C72565CB7900F028D5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		A3C697CC2565CD7200F028D5 /* MyPetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsView.swift; sourceTree = "<group>"; };
+		A3C697CC2565CD7200F028D5 /* MyPetsView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = MyPetsView.swift; sourceTree = "<group>"; };
 		A3C697D12565CE9400F028D5 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		A3C697D62565EB6300F028D5 /* PetCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */

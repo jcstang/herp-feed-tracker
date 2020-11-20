@@ -7,13 +7,7 @@
 
 import SwiftUI
 
-struct Reptile: Identifiable {
-    let id = UUID()
-    let name: String
-    let icon: String
-    let description: String
-}
-
+// Add button for the tabbar 
 struct AddButtonView: View {
     var body: some View {
         VStack {
@@ -34,11 +28,11 @@ struct ContentView: View {
         VStack {
             TabView(selection: $selectedView) {
                 MyPetsView()
-                    .tabItem {
-                        Image(systemName: "tortoise")
-                        Text("My Pets")
-                    }
-                    .tag(0)
+                  .tabItem {
+                    Image(systemName: "tortoise")
+                      Text("My Pets")
+                  }
+                  .tag(0)
                     
                 SettingsView()
                     .tabItem {
@@ -49,18 +43,15 @@ struct ContentView: View {
 
                 
             }
-            .background(Color.purple)
             
         }// end of VStack
-        .background(Color.green)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ContentView()
-            
+      ContentView()
             
     }
 }

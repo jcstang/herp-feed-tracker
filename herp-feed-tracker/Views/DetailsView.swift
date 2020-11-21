@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailsView: View {
     let theReptile: Reptile
+    let defaultDesc: String = "some herp"
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -19,7 +20,7 @@ struct DetailsView: View {
                 Text(theReptile.name)
                     .font(.largeTitle)
                     .bold()
-                Text(theReptile.description)
+                Text(theReptile.description ?? defaultDesc)
                     .font(.subheadline)
                 
                 Spacer()
@@ -28,7 +29,7 @@ struct DetailsView: View {
             .padding()
             .navigationBarTitle(Text(theReptile.name), displayMode: .inline)
             
-            Text(theReptile.description)
+            Text(theReptile.description ?? defaultDesc)
                 .font(.title)
                 .padding()
             

@@ -13,18 +13,19 @@ struct AddFeedingView: View {
     }
 }
 
-struct Reptile: Identifiable {
-    let id = UUID()
-    let name: String
-    let icon: String
-    let description: String
-}
+//struct Reptile: Identifiable {
+//    let id = UUID()
+//    let name: String
+//    let icon: String
+//    let description: String
+//}
 
 struct MyPetsView: View {
   @State var repList: [Reptile] = [
-      Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball"),
-      Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth"),
-      Reptile(name: "Erso", icon: "default_reptile", description: "cornsnake")
+    Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball", type: .snake),
+    Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth", type: .snake),
+    Reptile(name: "Erso", icon: "default_reptile", description: "cornsnake", type: .snake),
+    Reptile(name: "george")
     ]
     
     func handleNewFeeding() -> Void {
@@ -32,7 +33,7 @@ struct MyPetsView: View {
     }
     
     func handleNewReptile() -> Void {
-      self.repList.append(Reptile(name: "gizmo", icon: "default_reptile", description: "beard dragon"))
+      self.repList.append(Reptile(name: "gizmo"))
     }
     
     var body: some View {
@@ -40,13 +41,20 @@ struct MyPetsView: View {
         NavigationView {
           List(repList) { rep in
             NavigationLink(destination: DetailsView(theReptile: rep)) {
-              HStack {
-                  PetCircleView(reptile: rep)
-                  Text(rep.name)
-                      .font(.headline)
-                      .padding()
+                HStack {
+                    PetCircleView(reptile: rep)
+                  VStack {
+                    Text(rep.name)
+                        .font(.headline)
+                        .padding()
+                    
+                    Text(rep.description ?? "my pet")
+                        .font(.subheadline)
+                  }
 
-              }.padding(7)
+                }.padding()
+                
+
             }
           }
           .navigationBarTitle("Reptiles")

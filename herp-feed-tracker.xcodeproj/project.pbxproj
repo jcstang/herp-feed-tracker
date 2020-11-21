@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A3384DA52568A4B500E3DA1D /* Reptile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DA42568A4B500E3DA1D /* Reptile.swift */; };
+		A3384DAD2568B12700E3DA1D /* AddReptileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DAC2568B12700E3DA1D /* AddReptileFormView.swift */; };
 		A3C697952565913600F028D5 /* herp_feed_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697942565913600F028D5 /* herp_feed_trackerApp.swift */; };
 		A3C697972565913600F028D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697962565913600F028D5 /* ContentView.swift */; };
 		A3C697992565913800F028D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C697982565913800F028D5 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		A3384DA42568A4B500E3DA1D /* Reptile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reptile.swift; sourceTree = "<group>"; };
+		A3384DAC2568B12700E3DA1D /* AddReptileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReptileFormView.swift; sourceTree = "<group>"; };
 		A3C697912565913600F028D5 /* herp-feed-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "herp-feed-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C697942565913600F028D5 /* herp_feed_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = herp_feed_trackerApp.swift; sourceTree = "<group>"; };
 		A3C697962565913600F028D5 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -101,6 +103,7 @@
 				A3C697D62565EB6300F028D5 /* PetCircleView.swift */,
 				A3C697C72565CB7900F028D5 /* SettingsView.swift */,
 				A3C697C22565971800F028D5 /* SecondView.swift */,
+				A3384DAC2568B12700E3DA1D /* AddReptileFormView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				A3C697972565913600F028D5 /* ContentView.swift in Sources */,
 				A3C697952565913600F028D5 /* herp_feed_trackerApp.swift in Sources */,
 				A3384DA52568A4B500E3DA1D /* Reptile.swift in Sources */,
+				A3384DAD2568B12700E3DA1D /* AddReptileFormView.swift in Sources */,
 				A3C697CD2565CD7200F028D5 /* MyPetsView.swift in Sources */,
 				A3C697D22565CE9400F028D5 /* DetailsView.swift in Sources */,
 			);

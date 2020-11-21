@@ -39,11 +39,15 @@ struct MyPetsView: View {
     
     var body: some View {
       VStack {
+        // help from this site
+        //hackingwithswift.com/quick-start/swiftui/how-to-make-a-view-dismiss-itself
+        //*
         Button(action: {
           showAddReptileFormView = true
         }) {
           Text("go to other page")
         }
+        
         NavigationView {
           List(repList) { rep in
             NavigationLink(destination: DetailsView(theReptile: rep)) {

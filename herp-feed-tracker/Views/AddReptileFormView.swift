@@ -9,17 +9,14 @@ import SwiftUI
 
 struct AddReptileFormView: View {
     @State var someField: String
+    @State private var willMoveToNextScreen = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
-            NavigationView {
-            Label("Label \(someField)", systemImage: "42.circle")
+            Label(" \(someField)", systemImage: "keyboard")
             Form {
                 Section {
-                    // ** testing this mehtod of nav
-                    NavigationLink(destination: DetailsView(theReptile: Reptile(name: "rex"))) {
-                        Text("thingy")
-                    }
                     Text("thingy")
                     Text("thingy")
                 }
@@ -33,11 +30,12 @@ struct AddReptileFormView: View {
             }
             Button(action: {
                 someField = ""
+                self.presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "hare")
-                Text("all done")
+                Text("clear")
             }
-            }
+
         }
     }
 }

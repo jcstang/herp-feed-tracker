@@ -21,6 +21,7 @@ struct AddFeedingView: View {
 //}
 
 struct MyPetsView: View {
+  @State var showAddReptileFormView = false
   @State var repList: [Reptile] = [
     Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball", type: .snake),
     Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth", type: .snake),
@@ -38,6 +39,11 @@ struct MyPetsView: View {
     
     var body: some View {
       VStack {
+        Button(action: {
+          showAddReptileFormView = true
+        }) {
+          Text("go to other page")
+        }
         NavigationView {
           List(repList) { rep in
             NavigationLink(destination: DetailsView(theReptile: rep)) {
@@ -72,6 +78,9 @@ struct MyPetsView: View {
           
         }// eof nav view
       } //eof VStack
+      .sheet(isPresented: $showAddReptileFormView) {
+        AddReptileFormView(someField: "hello")
+      }
     }// eof body
 }
 

@@ -12,9 +12,14 @@ struct AddReptileFormView: View {
     
     var body: some View {
         VStack {
+            NavigationView {
             Label("Label \(someField)", systemImage: "42.circle")
             Form {
                 Section {
+                    // ** testing this mehtod of nav
+                    NavigationLink(destination: DetailsView(theReptile: Reptile(name: "rex"))) {
+                        Text("thingy")
+                    }
                     Text("thingy")
                     Text("thingy")
                 }
@@ -31,6 +36,7 @@ struct AddReptileFormView: View {
             }) {
                 Image(systemName: "hare")
                 Text("all done")
+            }
             }
         }
     }

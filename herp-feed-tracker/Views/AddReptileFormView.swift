@@ -17,16 +17,37 @@ struct AddReptileFormView: View {
             Label(" \(someField)", systemImage: "keyboard")
             Form {
                 Section {
-                    Text("thingy")
-                    Text("thingy")
+                    
+                    // ** Name **
+                    HStack {
+                        Text("Name ").fontWeight(.light)
+                        TextField("Name", text: $someField)
+                    }
+                    
+                    // ** Description **
+                    HStack {
+                        Text("Description ").fontWeight(.light)
+                        TextField("Name", text: $someField)
+                    }
+                    
                 }
-                Text("thingy")
-                Text("thingy")
-                Text("thingy")
+                
                 Section {
-                    Text("thingy!")
-                    TextField("fill this out", text: $someField)
+                    // ** Type **
+                    HStack {
+                        Text("Type ").fontWeight(.light)
+                        TextField("Name", text: $someField)
+                    }
                 }
+                
+                Section {
+                    // ** Birth Date **
+                    HStack {
+                        Text("Birth date ").fontWeight(.light)
+                        TextField("Name", text: $someField)
+                    }
+                }
+
             }
             Button(action: {
                 someField = ""

@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+class ReptileList: ObservableObject {
+    @Published var mainList: [Reptile]
+    
+    init(list: [Reptile]) {
+        self.mainList = list
+    }
+}

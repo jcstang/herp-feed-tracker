@@ -7,38 +7,33 @@
 
 import SwiftUI
 
-//struct AddFeedingView: View {
-//    var body: some View {
-//        Text("add new feeding. here.")
-//    }
-//}
-
 // ===================================================
 // Example code - ObservableObject and StateObject
 // ===================================================
-class Counter: ObservableObject {
-    @Published var value: Int = 0
-}
-
-struct CounterView: View {
-    
-    @StateObject var counter = Counter()
-    
-    var body: some View {
-        VStack {
-            Text("\(counter.value)")
-            Button("Increment Counter") {
-                counter.value += 1
-            }
-        }
-    }
-}
+//class Counter: ObservableObject {
+//    @Published var value: Int = 0
+//}
+//
+//struct CounterView: View {
+//
+//    @StateObject var counter = Counter()
+//
+//    var body: some View {
+//        VStack {
+//            Text("\(counter.value)")
+//            Button("Increment Counter") {
+//                counter.value += 1
+//            }
+//        }
+//    }
+//}
 // ===================================================
 
 
 struct MyPetsView: View {
   @State var showAddReptileFormView = false
   @State private var count: Int = 0
+  @StateObject var repList2: ReptileList
   @State var repList: [Reptile] = [
     Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball", type: .snake),
     Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth", type: .snake),
@@ -46,66 +41,54 @@ struct MyPetsView: View {
     Reptile(name: "george")
     ]
     
-    func handleNewFeeding() -> Void {
-        //display a form to fill out for new feeding
-    }
+  func handleNewFeeding() -> Void {
+      //display a form to fill out for new feeding
+  }
+  
+  func handleNewReptile() -> Void {
+    self.repList.append(Reptile(name: "gizmo"))
+    showAddReptileFormView = true
+  }
     
-    func handleNewReptile() -> Void {
-      self.repList.append(Reptile(name: "gizmo"))
-      showAddReptileFormView = true
-    }
     
-    var body: some View {
-      VStack {
-        // ===================================================
-        // Example in MyPetsView
-        // ===================================================
-//        VStack {
-//            Text("\(count)")
-//            Button("INCREMENT") {
-//                count += 1
-//            }
-//            CounterView()
-//        }
-        // ===================================================
+  var body: some View {
+    VStack {
+      NavigationView {
         
-        
-        NavigationView {
-          List(repList) { rep in
-            NavigationLink(destination: DetailsView(theReptile: rep)) {
-                HStack {
-                  PetCircleView(reptile: rep)
-                  VStack {
-                    Text(rep.name)
-                      .font(.headline)
-                      .padding()
-                    Text(rep.description ?? "my pet")
-                        .font(.subheadline)
-                  }
+        List(repList) { rep in
+          NavigationLink(destination: DetailsView(theReptile: rep)) {
+              HStack {
+                PetCircleView(reptile: rep)
+                VStack {
+                  Text(rep.name)
+                    .font(.headline)
+                    .padding()
+                  Text(rep.description ?? "my pet")
+                      .font(.subheadline)
+                }
 
-                }.padding()
+              }.padding()
 
-            }// endof NavLink
-          }// endof list
-          .navigationBarTitle("Reptiles")
-          .navigationBarItems(
-            trailing:
-              Menu {
-                Button("New Reptile", action: handleNewReptile)
-                Button("New Feeding", action: handleNewFeeding)
-                Button("New Poop", action: {})
-              } label: {
-                Image(systemName: "plus.circle")
-                  .font(.largeTitle)
-              }
-          )
-          
-        }// eof nav view
-      } //eof VStack
-      .sheet(isPresented: $showAddReptileFormView) {
-        AddReptileFormView(someField: "hello")
-      }
-    }// eof body
+          }// endof NavLink
+        }// endof list
+        .navigationBarTitle("Reptiles")
+        .navigationBarItems(
+          trailing:
+            Menu {
+              Button("New Reptile", action: handleNewReptile)
+              Button("New Feeding", action: handleNewFeeding)
+              Button("New Poop", action: {})
+            } label: {
+              Image(systemName: "plus.circle")
+                .font(.largeTitle)
+            }
+        )
+      }// eof nav view
+    } //eof VStack
+    .sheet(isPresented: $showAddReptileFormView) {
+      AddReptileFormView(someField: "hello")
+    }
+  } // eof body
 }
 
 struct MyPetsView_Previews: PreviewProvider {

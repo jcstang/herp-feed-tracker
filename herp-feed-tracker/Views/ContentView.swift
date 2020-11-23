@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+
+
+
+
 // Add button for the tabbar 
 struct AddButtonView: View {
     var body: some View {
@@ -22,9 +26,11 @@ struct AddButtonView: View {
 }
 
 struct ContentView: View {
-    @State var selectedView = 0
+  @State var selectedView = 0
+  @EnvironmentObject var daReptile: Reptile
     
     var body: some View {
+      
         VStack {
             TabView(selection: $selectedView) {
                 MyPetsView()

@@ -13,6 +13,29 @@ struct AddFeedingView: View {
     }
 }
 
+// ===================================================
+// Example code - ObservableObject and StateObject
+// ===================================================
+class Counter: ObservableObject {
+    @Published var value: Int = 0
+}
+
+struct CounterView: View {
+    
+    @StateObject var counter = Counter()
+    
+    var body: some View {
+        VStack {
+            Text("\(counter.value)")
+            Button("Increment Counter") {
+                counter.value += 1
+            }
+        }
+    }
+}
+// ===================================================
+
+
 //struct Reptile: Identifiable {
 //    let id = UUID()
 //    let name: String
@@ -22,6 +45,7 @@ struct AddFeedingView: View {
 
 struct MyPetsView: View {
   @State var showAddReptileFormView = false
+  @State private var count: Int = 0
   @State var repList: [Reptile] = [
     Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball", type: .snake),
     Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth", type: .snake),
@@ -34,7 +58,8 @@ struct MyPetsView: View {
     }
     
     func handleNewReptile() -> Void {
-      self.repList.append(Reptile(name: "gizmo"))
+//      self.repList.append(Reptile(name: "gizmo"))
+      showAddReptileFormView = true
     }
     
     var body: some View {
@@ -47,6 +72,19 @@ struct MyPetsView: View {
         }) {
           Text("go to other page")
         }
+        
+        // ===================================================
+        // Example in MyPetsView
+        // ===================================================
+        VStack {
+            Text("\(count)")
+            Button("INCREMENT") {
+                count += 1
+            }
+            CounterView()
+        }
+        // ===================================================
+        
         
         NavigationView {
           List(repList) { rep in

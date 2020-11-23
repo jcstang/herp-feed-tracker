@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct herp_feed_trackerApp: App {
+struct herp_feed_trackerApp: App {  
     var body: some Scene {
         WindowGroup {
             ContentView()

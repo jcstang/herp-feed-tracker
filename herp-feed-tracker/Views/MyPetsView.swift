@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct AddFeedingView: View {
-    var body: some View {
-        Text("add new feeding. here.")
-    }
-}
+//struct AddFeedingView: View {
+//    var body: some View {
+//        Text("add new feeding. here.")
+//    }
+//}
 
 // ===================================================
 // Example code - ObservableObject and StateObject
@@ -36,13 +36,6 @@ struct CounterView: View {
 // ===================================================
 
 
-//struct Reptile: Identifiable {
-//    let id = UUID()
-//    let name: String
-//    let icon: String
-//    let description: String
-//}
-
 struct MyPetsView: View {
   @State var showAddReptileFormView = false
   @State private var count: Int = 0
@@ -58,31 +51,22 @@ struct MyPetsView: View {
     }
     
     func handleNewReptile() -> Void {
-//      self.repList.append(Reptile(name: "gizmo"))
+      self.repList.append(Reptile(name: "gizmo"))
       showAddReptileFormView = true
     }
     
     var body: some View {
       VStack {
-        // help from this site
-        //hackingwithswift.com/quick-start/swiftui/how-to-make-a-view-dismiss-itself
-        //*
-        Button(action: {
-          showAddReptileFormView = true
-        }) {
-          Text("go to other page")
-        }
-        
         // ===================================================
         // Example in MyPetsView
         // ===================================================
-        VStack {
-            Text("\(count)")
-            Button("INCREMENT") {
-                count += 1
-            }
-            CounterView()
-        }
+//        VStack {
+//            Text("\(count)")
+//            Button("INCREMENT") {
+//                count += 1
+//            }
+//            CounterView()
+//        }
         // ===================================================
         
         
@@ -90,21 +74,19 @@ struct MyPetsView: View {
           List(repList) { rep in
             NavigationLink(destination: DetailsView(theReptile: rep)) {
                 HStack {
-                    PetCircleView(reptile: rep)
+                  PetCircleView(reptile: rep)
                   VStack {
                     Text(rep.name)
-                        .font(.headline)
-                        .padding()
-                    
+                      .font(.headline)
+                      .padding()
                     Text(rep.description ?? "my pet")
                         .font(.subheadline)
                   }
 
                 }.padding()
-                
 
-            }
-          }
+            }// endof NavLink
+          }// endof list
           .navigationBarTitle("Reptiles")
           .navigationBarItems(
             trailing:
@@ -125,13 +107,6 @@ struct MyPetsView: View {
       }
     }// eof body
 }
-
-//Menu {
-//    Button("Open in Preview", action: openInPreview)
-//    Button("Save as PDF", action: saveAsPDF)
-//} label: {
-//    Label("PDF", systemImage: "doc.fill")
-//}
 
 struct MyPetsView_Previews: PreviewProvider {
     static var previews: some View {

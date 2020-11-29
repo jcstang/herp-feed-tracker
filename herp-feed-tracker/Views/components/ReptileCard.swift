@@ -13,8 +13,8 @@ struct ReptileCard: View {
     var body: some View {
         ZStack {
             GroupBox(
-                label: Label(self.reptile.name, systemImage: "tortoise")
-                    .foregroundColor(.red)
+                label: Label(self.reptile.name, systemImage: "heart.fill")
+                                .foregroundColor(.red)
             ) {
                 Text(self.reptile.description ?? "a cool looking guy")
             }

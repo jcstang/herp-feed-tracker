@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A32C8A1225732421000C5A26 /* ReptileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C8A1125732421000C5A26 /* ReptileCard.swift */; };
 		A3384DA52568A4B500E3DA1D /* Reptile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DA42568A4B500E3DA1D /* Reptile.swift */; };
 		A3384DAD2568B12700E3DA1D /* AddReptileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DAC2568B12700E3DA1D /* AddReptileFormView.swift */; };
 		A3384DB22569F3E500E3DA1D /* FormRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DB12569F3E500E3DA1D /* FormRowView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A32C8A1125732421000C5A26 /* ReptileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReptileCard.swift; sourceTree = "<group>"; };
 		A3384DA42568A4B500E3DA1D /* Reptile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reptile.swift; sourceTree = "<group>"; };
 		A3384DAC2568B12700E3DA1D /* AddReptileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReptileFormView.swift; sourceTree = "<group>"; };
 		A3384DB12569F3E500E3DA1D /* FormRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32C8A1025732407000C5A26 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				A32C8A1125732421000C5A26 /* ReptileCard.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		A3384D9E2568A47400E3DA1D /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		A3384D9F2568A48D00E3DA1D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A32C8A1025732407000C5A26 /* components */,
 				A3C697962565913600F028D5 /* ContentView.swift */,
 				A3C697CC2565CD7200F028D5 /* MyPetsView.swift */,
 				A3C697D12565CE9400F028D5 /* DetailsView.swift */,
@@ -326,6 +337,7 @@
 				A3C697D72565EB6300F028D5 /* PetCircleView.swift in Sources */,
 				A3C697972565913600F028D5 /* ContentView.swift in Sources */,
 				A3C697952565913600F028D5 /* herp_feed_trackerApp.swift in Sources */,
+				A32C8A1225732421000C5A26 /* ReptileCard.swift in Sources */,
 				A3384DA52568A4B500E3DA1D /* Reptile.swift in Sources */,
 				A3384DAD2568B12700E3DA1D /* AddReptileFormView.swift in Sources */,
 				A3384DB8256B7B3100E3DA1D /* MyPetsViewModel.swift in Sources */,

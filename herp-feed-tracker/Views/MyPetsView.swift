@@ -33,7 +33,7 @@ import SwiftUI
 struct MyPetsView: View {
   @State var showAddReptileFormView = false
   @State private var count: Int = 0
-  @StateObject var repList2: ReptileList
+//  @StateObject var repList2: ReptileList
   @State var repList: [Reptile] = [
     Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball", type: .snake),
     Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth", type: .snake),
@@ -54,36 +54,61 @@ struct MyPetsView: View {
   var body: some View {
     VStack {
       NavigationView {
-        
+//        List(repList) { rep in
+//          NavigationLink(destination: DetailsView(theReptile: rep)) {
+//              HStack {
+//                PetCircleView(reptile: rep)
+//                VStack {
+//                  Text(rep.name)
+//                    .font(.headline)
+//                    .padding()
+//                  Text(rep.description ?? "my pet")
+//                      .font(.subheadline)
+//                }
+//
+//              }.padding()
+//
+//          }// endof NavLink
+//        }// endof list
+        //*******
         List(repList) { rep in
           NavigationLink(destination: DetailsView(theReptile: rep)) {
-              HStack {
-                PetCircleView(reptile: rep)
-                VStack {
-                  Text(rep.name)
-                    .font(.headline)
-                    .padding()
-                  Text(rep.description ?? "my pet")
-                      .font(.subheadline)
-                }
-
-              }.padding()
-
-          }// endof NavLink
-        }// endof list
+            ReptileCard(reptile: rep)
+          }
+        }
+        //*******
         .navigationBarTitle("Reptiles")
-        .navigationBarItems(
-          trailing:
-            Menu {
-              Button("New Reptile", action: handleNewReptile)
-              Button("New Feeding", action: handleNewFeeding)
-              Button("New Poop", action: {})
-            } label: {
-              Image(systemName: "plus.circle")
-                .font(.largeTitle)
-            }
-        )
+//        .navigationBarItems(
+//          trailing:
+//            Menu {
+//              Button("New Reptile", action: handleNewReptile)
+//              Button("New Feeding", action: handleNewFeeding)
+//              Button("New Poop", action: {})
+//            } label: {
+//              Image(systemName: "plus.circle")
+//                .font(.largeTitle)
+//            }
+//        )
+
+        
       }// eof nav view
+      Spacer()
+      HStack {
+        Button(action: {
+            print("Add button tapped!")
+            handleNewReptile()
+        }) {
+            HStack {
+                Image(systemName: "plus")
+                    .font(.title)
+            }
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.green)
+            .cornerRadius(40)
+        }
+      }
+      
     } //eof VStack
     .sheet(isPresented: $showAddReptileFormView) {
       AddReptileFormView(someField: "hello")

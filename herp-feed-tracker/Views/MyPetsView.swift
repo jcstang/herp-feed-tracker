@@ -29,7 +29,6 @@ import SwiftUI
 //}
 // ===================================================
 
-
 struct MyPetsView: View {
   @State var showAddReptileFormView = false
   @State private var count: Int = 0
@@ -50,7 +49,7 @@ struct MyPetsView: View {
     showAddReptileFormView = true
   }
     
-    
+  // MARK: - body
   var body: some View {
     VStack {
       NavigationView {

@@ -54,46 +54,14 @@ struct MyPetsView: View {
   var body: some View {
     VStack {
       NavigationView {
-//        List(repList) { rep in
-//          NavigationLink(destination: DetailsView(theReptile: rep)) {
-//              HStack {
-//                PetCircleView(reptile: rep)
-//                VStack {
-//                  Text(rep.name)
-//                    .font(.headline)
-//                    .padding()
-//                  Text(rep.description ?? "my pet")
-//                      .font(.subheadline)
-//                }
-//
-//              }.padding()
-//
-//          }// endof NavLink
-//        }// endof list
-        //*******
         List(repList) { rep in
           NavigationLink(destination: DetailsView(theReptile: rep)) {
             ReptileCard(reptile: rep)
           }
         }
-        //*******
         .navigationBarTitle("My Pets")
-//        .navigationBarItems(
-//          trailing:
-//            Menu {
-//              Button("New Reptile", action: handleNewReptile)
-//              Button("New Feeding", action: handleNewFeeding)
-//              Button("New Poop", action: {})
-//            } label: {
-//              Image(systemName: "plus.circle")
-//                .font(.largeTitle)
-//            }
-//        )
-
-        
       }// eof nav view
       Spacer()
-      
       
       // MARK: Add button
       HStack {

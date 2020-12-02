@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A32C8A1225732421000C5A26 /* ReptileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C8A1125732421000C5A26 /* ReptileCard.swift */; };
+		A32C8A1A25734D9B000C5A26 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C8A1925734D9B000C5A26 /* TestingView.swift */; };
 		A3384DA52568A4B500E3DA1D /* Reptile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DA42568A4B500E3DA1D /* Reptile.swift */; };
 		A3384DAD2568B12700E3DA1D /* AddReptileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DAC2568B12700E3DA1D /* AddReptileFormView.swift */; };
 		A3384DB22569F3E500E3DA1D /* FormRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DB12569F3E500E3DA1D /* FormRowView.swift */; };
+		A3384DB8256B7B3100E3DA1D /* MyPetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DB7256B7B3100E3DA1D /* MyPetsViewModel.swift */; };
+		A3384DC0256B7E0C00E3DA1D /* appTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DBF256B7E0C00E3DA1D /* appTabView.swift */; };
 		A3C697952565913600F028D5 /* herp_feed_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697942565913600F028D5 /* herp_feed_trackerApp.swift */; };
 		A3C697972565913600F028D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697962565913600F028D5 /* ContentView.swift */; };
 		A3C697992565913800F028D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C697982565913800F028D5 /* Assets.xcassets */; };
@@ -41,9 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A32C8A1125732421000C5A26 /* ReptileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReptileCard.swift; sourceTree = "<group>"; };
+		A32C8A1925734D9B000C5A26 /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
 		A3384DA42568A4B500E3DA1D /* Reptile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reptile.swift; sourceTree = "<group>"; };
 		A3384DAC2568B12700E3DA1D /* AddReptileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReptileFormView.swift; sourceTree = "<group>"; };
 		A3384DB12569F3E500E3DA1D /* FormRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowView.swift; sourceTree = "<group>"; };
+		A3384DB7256B7B3100E3DA1D /* MyPetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsViewModel.swift; sourceTree = "<group>"; };
+		A3384DBF256B7E0C00E3DA1D /* appTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appTabView.swift; sourceTree = "<group>"; };
 		A3C697912565913600F028D5 /* herp-feed-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "herp-feed-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C697942565913600F028D5 /* herp_feed_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = herp_feed_trackerApp.swift; sourceTree = "<group>"; };
 		A3C697962565913600F028D5 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -88,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32C8A1025732407000C5A26 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				A32C8A1125732421000C5A26 /* ReptileCard.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		A3384D9E2568A47400E3DA1D /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +115,8 @@
 		A3384D9F2568A48D00E3DA1D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A32C8A1025732407000C5A26 /* components */,
+				A3384DBF256B7E0C00E3DA1D /* appTabView.swift */,
 				A3C697962565913600F028D5 /* ContentView.swift */,
 				A3C697CC2565CD7200F028D5 /* MyPetsView.swift */,
 				A3C697D12565CE9400F028D5 /* DetailsView.swift */,
@@ -107,6 +125,7 @@
 				A3C697C22565971800F028D5 /* SecondView.swift */,
 				A3384DAC2568B12700E3DA1D /* AddReptileFormView.swift */,
 				A3384DB12569F3E500E3DA1D /* FormRowView.swift */,
+				A32C8A1925734D9B000C5A26 /* TestingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +136,14 @@
 				A3384DA42568A4B500E3DA1D /* Reptile.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A3384DB6256B7B0D00E3DA1D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A3384DB7256B7B3100E3DA1D /* MyPetsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A3C697882565913600F028D5 = {
@@ -145,6 +172,7 @@
 				A3384D9E2568A47400E3DA1D /* App */,
 				A3384DA32568A49900E3DA1D /* Models */,
 				A3384D9F2568A48D00E3DA1D /* Views */,
+				A3384DB6256B7B0D00E3DA1D /* ViewModels */,
 				A3C697982565913800F028D5 /* Assets.xcassets */,
 				A3C6979D2565913800F028D5 /* Info.plist */,
 				A3C6979A2565913800F028D5 /* Preview Content */,
@@ -312,11 +340,15 @@
 				A3C697D72565EB6300F028D5 /* PetCircleView.swift in Sources */,
 				A3C697972565913600F028D5 /* ContentView.swift in Sources */,
 				A3C697952565913600F028D5 /* herp_feed_trackerApp.swift in Sources */,
+				A32C8A1225732421000C5A26 /* ReptileCard.swift in Sources */,
 				A3384DA52568A4B500E3DA1D /* Reptile.swift in Sources */,
 				A3384DAD2568B12700E3DA1D /* AddReptileFormView.swift in Sources */,
+				A3384DB8256B7B3100E3DA1D /* MyPetsViewModel.swift in Sources */,
 				A3C697CD2565CD7200F028D5 /* MyPetsView.swift in Sources */,
 				A3C697D22565CE9400F028D5 /* DetailsView.swift in Sources */,
+				A3384DC0256B7E0C00E3DA1D /* appTabView.swift in Sources */,
 				A3384DB22569F3E500E3DA1D /* FormRowView.swift in Sources */,
+				A32C8A1A25734D9B000C5A26 /* TestingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

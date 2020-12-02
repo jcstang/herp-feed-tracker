@@ -116,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A32C8A1025732407000C5A26 /* components */,
+				A3384DBF256B7E0C00E3DA1D /* appTabView.swift */,
 				A3C697962565913600F028D5 /* ContentView.swift */,
 				A3C697CC2565CD7200F028D5 /* MyPetsView.swift */,
 				A3C697D12565CE9400F028D5 /* DetailsView.swift */,
@@ -124,7 +125,6 @@
 				A3C697C22565971800F028D5 /* SecondView.swift */,
 				A3384DAC2568B12700E3DA1D /* AddReptileFormView.swift */,
 				A3384DB12569F3E500E3DA1D /* FormRowView.swift */,
-				A3384DBF256B7E0C00E3DA1D /* appTabView.swift */,
 				A32C8A1925734D9B000C5A26 /* TestingView.swift */,
 			);
 			path = Views;

@@ -77,7 +77,7 @@ struct MyPetsView: View {
           }
         }
         //*******
-        .navigationBarTitle("Reptiles")
+        .navigationBarTitle("My Pets")
 //        .navigationBarItems(
 //          trailing:
 //            Menu {
@@ -93,6 +93,9 @@ struct MyPetsView: View {
         
       }// eof nav view
       Spacer()
+      
+      
+      // MARK: Add button
       HStack {
         Button(action: {
             print("Add button tapped!")

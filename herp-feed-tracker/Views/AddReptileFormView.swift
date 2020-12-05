@@ -16,42 +16,54 @@ enum Flavor: String, CaseIterable, Identifiable {
     var id: String { self.rawValue }
 }
 
+enum Type: String, CaseIterable, Identifiable {
+  case snake
+  case gecko
+  case other
+  
+  var id: String { self.rawValue }
+}
+
 
 struct AddReptileFormView: View {
-    @State var someField: String
-    @State private var willMoveToNextScreen = false
-    @Environment(\.presentationMode) var presentationMode
-    @State private var selectedFlavor = Flavor.chocolate
+  @State var someField: String
+  @State var newReptile: Reptile = Reptile(name: "Rex")
+  @State private var selectedType = Type.snake
+  @State var name: String?
+  @State var desc: String?
+  
+  @State private var willMoveToNextScreen = false
+  @Environment(\.presentationMode) var presentationMode
+  @State private var selectedFlavor = Flavor.chocolate
+  
+  func collectValues() -> Void {
+    // collect stuff
+    // create a new reptile from the values
+  }
+  
     
     var body: some View {
-        VStack {
-            Label(" \(someField)", systemImage: "keyboard")
-            NavigationView {
+      VStack {
+        Label(" \(newReptile.name)", systemImage: "keyboard")
+          NavigationView {
             Form {
-                Section {
+              Section {
+                TextField("Name", text: $name)
+                TextField("Description", text: $desc)
                     
-                    TextField("Name", text: $someField)
-                    TextField("Description", text: $someField)
-                    
-                }
+              }
                 
-                Section {
-                    // ** Type **
-                    TextField("Type", text: $someField)
-                    Picker(selection: .constant(1), label: Text("Picker")) {
-                        Text("snake").tag(1)
-                        Text("Other").tag(2)
-                        Text("Gecko").tag(3)
-                    }
-                    
-                    Picker("Flavor", selection: $selectedFlavor) {
-                        Text("Chocolate").tag(Flavor.chocolate)
-                        Text("Vanilla").tag(Flavor.vanilla)
-                        Text("Strawberry").tag(Flavor.strawberry)
-                    }
-                    
-                    Text("Selected flavor: \(selectedFlavor.rawValue)")
+              Section {
+                
+                Picker("Type", selection: $selectedType) {
+                  Text("Snake").tag(Type.snake)
+                  Text("Gecko").tag(Type.gecko)
+                  Text("Other").tag(Type.other)
                 }
+                  
+                Text("Selected flavor: \(selectedFlavor.rawValue)")
+                Text("rep type: \(selectedType.rawValue)")
+              }
                 
                 Section {
                     // ** Birth Date **
@@ -62,7 +74,7 @@ struct AddReptileFormView: View {
                     }
                 }
 
-            }
+            } // eof form
         }
             
             
@@ -70,7 +82,7 @@ struct AddReptileFormView: View {
                 someField = ""
                 self.presentationMode.wrappedValue.dismiss()
             }) {
-                Image(systemName: "hare")
+                Image(systemName: "tortoise")
                 Text("Save")
             }
 
@@ -81,6 +93,6 @@ struct AddReptileFormView: View {
 struct AddReptileFormView_Previews: PreviewProvider {
     static var previews: some View {
 //        AddReptileFormView(someField: "")
-        AddReptileFormView(someField: "blah")
+      AddReptileFormView(someField: "New", name: "rex", desc: "blah")
     }
 }

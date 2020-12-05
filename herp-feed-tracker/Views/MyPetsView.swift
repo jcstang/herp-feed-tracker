@@ -62,6 +62,7 @@ struct MyPetsView: View {
       }// eof nav view
       Spacer()
       
+      // *************************************************
       // MARK: Add button
       HStack {
         Button(action: {
@@ -78,10 +79,11 @@ struct MyPetsView: View {
             .cornerRadius(40)
         }
       }
+      // *************************************************
       
     } //eof VStack
     .sheet(isPresented: $showAddReptileFormView) {
-      AddReptileFormView(someField: "hello")
+      AddReptileFormView(someField: "hello", name: "Rex", desc: "cool")
     }
   } // eof body
 }

@@ -23,12 +23,3 @@ class Reptile: Identifiable, ObservableObject {
         self.birthDate = birthDate
     }
 }
-
-enum Type {
-    case snake
-    case gecko
-    case skink
-    case dragon
-    
-        
-}

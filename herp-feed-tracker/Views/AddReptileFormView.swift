@@ -26,11 +26,11 @@ enum Type: String, CaseIterable, Identifiable {
 
 
 struct AddReptileFormView: View {
-  @State var someField: String
+//  @State var someField: String
   @State var newReptile: Reptile = Reptile(name: "Rex")
   @State private var selectedType = Type.snake
-  @State var name: String?
-  @State var desc: String?
+//  @State var name: String
+//  @State var desc: String
   
   @State private var willMoveToNextScreen = false
   @Environment(\.presentationMode) var presentationMode
@@ -47,15 +47,15 @@ struct AddReptileFormView: View {
         Label(" \(newReptile.name)", systemImage: "keyboard")
           NavigationView {
             Form {
-              Section {
-                TextField("Name", text: $name)
-                TextField("Description", text: $desc)
+              Section(header: Text("Name & Description")) {
+                TextField("Name", text: $newReptile.name)
+                TextField("Description", text: $newReptile.description)
                     
               }
                 
               Section {
                 
-                Picker("Type", selection: $selectedType) {
+                Picker("Type", selection: $newReptile.type) {
                   Text("Snake").tag(Type.snake)
                   Text("Gecko").tag(Type.gecko)
                   Text("Other").tag(Type.other)
@@ -69,7 +69,7 @@ struct AddReptileFormView: View {
                     // ** Birth Date **
                     VStack {
                         VStack {
-                            DatePicker(selection: .constant(Date()), label: { Text("Birth date") })
+                          DatePicker(selection: .constant(newReptile.birthDate), label: { Text("Birth Date") })
                         }
                     }
                 }
@@ -79,11 +79,10 @@ struct AddReptileFormView: View {
             
             
             Button(action: {
-                someField = ""
-                self.presentationMode.wrappedValue.dismiss()
+              self.presentationMode.wrappedValue.dismiss()
             }) {
-                Image(systemName: "tortoise")
-                Text("Save")
+              Image(systemName: "tortoise")
+              Text("Save")
             }
 
         }
@@ -93,6 +92,6 @@ struct AddReptileFormView: View {
 struct AddReptileFormView_Previews: PreviewProvider {
     static var previews: some View {
 //        AddReptileFormView(someField: "")
-      AddReptileFormView(someField: "New", name: "rex", desc: "blah")
+      AddReptileFormView()
     }
 }

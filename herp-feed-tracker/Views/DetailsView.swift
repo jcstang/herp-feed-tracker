@@ -39,6 +39,6 @@ struct DetailsView: View {
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(theReptile: Reptile(name: "rex", icon: "mic", description: "paperclip"))
+        DetailsView(theReptile: Reptile(name: "rex"))
     }
 }

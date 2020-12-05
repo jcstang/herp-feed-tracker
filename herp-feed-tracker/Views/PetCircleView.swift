@@ -25,6 +25,6 @@ struct PetCircleView: View {
 
 struct PetCircleView_Previews: PreviewProvider {
     static var previews: some View {
-        PetCircleView(reptile: Reptile(name: "blaze", icon: "default_reptile_photo", description: "blah"))
+        PetCircleView(reptile: Reptile(name: "blaze"))
     }
 }

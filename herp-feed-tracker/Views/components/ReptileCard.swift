@@ -24,7 +24,7 @@ struct ReptileCard: View {
 
 struct ReptileCard_Previews: PreviewProvider {
     static var previews: some View {
-        ReptileCard(reptile: Reptile(name: "Cayenne", description: "A Gargoyle Gecko that is a fatty!"))
+        ReptileCard(reptile: Reptile(name: "Cayenne"))
             .previewLayout(.sizeThatFits)
     }
 }

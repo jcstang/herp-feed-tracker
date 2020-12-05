@@ -8,27 +8,15 @@
 import Foundation
 
 class Reptile: Identifiable, ObservableObject {
-    let id = UUID()
-    let name: String
-    let icon: String?
-    let description: String?
-    let type: Type?
-    let birthDate: Date?
+  let id = UUID()
+  var name: String = "Rascal"
+  var icon: String = "default_reptile"
+  var description: String = "some cool reptile I own"
+  var type: Type = Type.snake
+  var birthDate: Date = Date()
     
-    init(name: String, icon: String? = "default_reptile", description: String? = "some reptile, duh!", type: Type? = .snake, birthDate: Date? = Date() ) {
-        self.name = name
-        self.icon = icon
-        self.description = description
-        self.type = type
-        self.birthDate = birthDate
-    }
-}
-
-enum Type {
-    case snake
-    case gecko
-    case skink
-    case dragon
-    
-        
+  init(name: String ) {
+    self.name = name
+  }
+  
 }

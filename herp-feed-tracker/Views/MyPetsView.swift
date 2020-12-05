@@ -34,9 +34,9 @@ struct MyPetsView: View {
   @State private var count: Int = 0
 //  @StateObject var repList2: ReptileList
   @State var repList: [Reptile] = [
-    Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball", type: .snake),
-    Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth", type: .snake),
-    Reptile(name: "Erso", icon: "default_reptile", description: "cornsnake", type: .snake),
+    Reptile(name: "gimli"),
+    Reptile(name: "Zelda"),
+    Reptile(name: "Erso"),
     Reptile(name: "george")
     ]
     
@@ -62,6 +62,7 @@ struct MyPetsView: View {
       }// eof nav view
       Spacer()
       
+      // *************************************************
       // MARK: Add button
       HStack {
         Button(action: {
@@ -78,10 +79,13 @@ struct MyPetsView: View {
             .cornerRadius(40)
         }
       }
+      // *************************************************
       
     } //eof VStack
     .sheet(isPresented: $showAddReptileFormView) {
-      AddReptileFormView(someField: "hello")
+      AddReptileFormView(newReptile: Reptile(name: "Bob"))
+      // TODO: what do I do with this newly
+      // created reptile???????
     }
   } // eof body
 }

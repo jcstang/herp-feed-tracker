@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3059A1B257C0C2800582333 /* ReptileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3059A1A257C0C2800582333 /* ReptileViewModel.swift */; };
 		A32C8A1225732421000C5A26 /* ReptileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C8A1125732421000C5A26 /* ReptileCard.swift */; };
 		A32C8A1A25734D9B000C5A26 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C8A1925734D9B000C5A26 /* TestingView.swift */; };
 		A3384DA52568A4B500E3DA1D /* Reptile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3384DA42568A4B500E3DA1D /* Reptile.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3059A1A257C0C2800582333 /* ReptileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReptileViewModel.swift; sourceTree = "<group>"; };
 		A32C8A1125732421000C5A26 /* ReptileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReptileCard.swift; sourceTree = "<group>"; };
 		A32C8A1925734D9B000C5A26 /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
 		A3384DA42568A4B500E3DA1D /* Reptile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reptile.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A3384DB7256B7B3100E3DA1D /* MyPetsViewModel.swift */,
+				A3059A1A257C0C2800582333 /* ReptileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				A3C697952565913600F028D5 /* herp_feed_trackerApp.swift in Sources */,
 				A32C8A1225732421000C5A26 /* ReptileCard.swift in Sources */,
 				A3384DA52568A4B500E3DA1D /* Reptile.swift in Sources */,
+				A3059A1B257C0C2800582333 /* ReptileViewModel.swift in Sources */,
 				A3384DAD2568B12700E3DA1D /* AddReptileFormView.swift in Sources */,
 				A3384DB8256B7B3100E3DA1D /* MyPetsViewModel.swift in Sources */,
 				A3C697CD2565CD7200F028D5 /* MyPetsView.swift in Sources */,

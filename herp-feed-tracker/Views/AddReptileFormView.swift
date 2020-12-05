@@ -81,6 +81,11 @@ struct AddReptileFormView: View {
             
             
             Button(action: {
+              collectValues()
+              print("before")
+              print($newReptile)
+              print("stopping point")
+              
               self.presentationMode.wrappedValue.dismiss()
             }) {
               Image(systemName: "tortoise")

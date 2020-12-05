@@ -15,10 +15,6 @@ class ReptileViewModel: Identifiable, ObservableObject {
   @Published var hatchBirthDay: Date = Date()
   @Published var listOfReptiles: [Reptile] = []
   
-  init() {
-    fillDefaultReptiles()
-  }
-  
   func fillDefaultReptiles() -> Void {
     self.listOfReptiles.append(
       contentsOf:

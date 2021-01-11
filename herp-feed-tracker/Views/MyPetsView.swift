@@ -33,19 +33,22 @@ struct MyPetsView: View {
   @State var showAddReptileFormView = false
   @State private var count: Int = 0
 //  @StateObject var repList2: ReptileList
-  @State var repList: [Reptile] = [
-    Reptile(name: "gimli"),
-    Reptile(name: "Zelda"),
-    Reptile(name: "Erso"),
-    Reptile(name: "george")
-    ]
+//  @State var repList: [Reptile] = [
+//    Reptile(name: "gimli"),
+//    Reptile(name: "Zelda"),
+//    Reptile(name: "Erso"),
+//    Reptile(name: "george")
+//    ]
+  
+  @ObservedObject private var reptileViewModel = ReptileViewModel()
+  
     
   func handleNewFeeding() -> Void {
       //display a form to fill out for new feeding
   }
   
   func handleNewReptile() -> Void {
-    self.repList.append(Reptile(name: "gizmo"))
+//    self.repList.append(Reptile(name: "gizmo"))
     showAddReptileFormView = true
   }
     
@@ -53,7 +56,7 @@ struct MyPetsView: View {
   var body: some View {
     VStack {
       NavigationView {
-        List(repList) { rep in
+        List(reptileViewModel.listOfReptiles) { rep in
           NavigationLink(destination: DetailsView(theReptile: rep)) {
             ReptileCard(reptile: rep)
           }

@@ -12,7 +12,7 @@ struct PetCircleView: View {
     let defaultIcon: String = "default_reptile"
     var body: some View {
         ZStack {
-            Image(reptile.icon ?? defaultIcon)
+          Image(reptile.icon)
                 .shadow(radius: 3)
                 .frame(width: 100, height: 100, alignment: .center)
                 .overlay(

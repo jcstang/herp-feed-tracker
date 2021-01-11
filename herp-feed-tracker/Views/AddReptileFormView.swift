@@ -35,10 +35,12 @@ struct AddReptileFormView: View {
   @State private var willMoveToNextScreen = false
   @Environment(\.presentationMode) var presentationMode
   @State private var selectedFlavor = Flavor.chocolate
+  @ObservedObject private var reptileViewModel = ReptileViewModel()
   
   func collectValues() -> Void {
     // collect stuff
     // create a new reptile from the values
+    reptileViewModel.listOfReptiles.append(newReptile)
   }
   
     
@@ -79,6 +81,11 @@ struct AddReptileFormView: View {
             
             
             Button(action: {
+              collectValues()
+              print("before")
+              print($newReptile)
+              print("stopping point")
+              
               self.presentationMode.wrappedValue.dismiss()
             }) {
               Image(systemName: "tortoise")

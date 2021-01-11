@@ -20,7 +20,7 @@ struct DetailsView: View {
                 Text(theReptile.name)
                     .font(.largeTitle)
                     .bold()
-                Text(theReptile.description ?? defaultDesc)
+              Text(theReptile.description)
                     .font(.subheadline)
                 
                 Spacer()
@@ -29,7 +29,7 @@ struct DetailsView: View {
             .padding()
             .navigationBarTitle(Text(theReptile.name), displayMode: .inline)
             
-            Text(theReptile.description ?? defaultDesc)
+          Text(theReptile.description)
                 .font(.title)
                 .padding()
             
